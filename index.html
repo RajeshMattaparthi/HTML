@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>My webPage</title>
+        <link rel="icon" type="image/jpg" href="mylogo.jpg">
+    </head>
+    <body>
+        <h1 style="text-align:center">Student Registration Form</h1>
+        <form id="myform" action="#">
+        <label>Name :</label>
+        <input type="text" id="studentname" placeholder="username here"><br><br>
+        <label>DOB :</label>
+        <input type="date" id="Dob" name="Dob"><br><br>
+        <label>email :</label>
+        <input type="text" id="email" placeholder="enter your email here"><br><br>
+        <label>Gender :</label>
+        <input type="radio" name="Male">Male
+        <input type="radio" name="female">Female
+        <input type="radio" name="Others">Others<br><br>
+        <label>Father Name :</label>
+        <input type="text" id="fathername" placeholder="enter your fathers name here"><br><br>
+        <label>Course :</label>&ensp;
+        <label>Java</label>
+        <input type="checkbox" id="java" name="java" value="java">&ensp;
+        <label>C</label>
+        <input type="checkbox" id="c" name="c" value="c">&ensp;
+        <label>Python</label>
+        <input type="checkbox" id="python" name="python" value="python">&ensp;
+        <label>C++</label>
+        <input type="checkbox" id="c++" name="c++" value="c++"><br><br>
+        <b>Address</b><br><br>
+        <label>D.NO :</label>
+        <input type="text" id="dno"><br><br>
+        <label>Street :</label>
+        <input type="text" id="text"><br><br>
+        <label>District :</label>
+        <input type="text" name="dist" id="dist"><br><br>
+        <label>Country :</label>
+        <input type="text" name="country" id="country"><br><br>
+        <input type="button" value="Submit" onclick="sub()">&ensp;
+        <input type="button" value="Reset" onclick="res()">
+
+        <h1 id="message" style="color:red"></h1>
+        <h1 id="mesage" style="color:green"></h1>
+        </form>
+        <script>
+            function sub() {
+
+var username = document.getElementById("studentname").value;
+if (username == null||username == "") {
+
+    document.getElementById("message").innerHTML = "Incorrect Details";
+
+}
+else{
+    document.getElementById("mesage").innerHTML = username + "Registered successfully ";
+}
+
+}
+        function res(){  
+            document.getElementById("myform").reset();  
+          }   
+          </script>
+    </body>
+</html>
